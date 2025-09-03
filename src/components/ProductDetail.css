@@ -1,0 +1,138 @@
+.productDetail {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.productDetail__left {
+    flex: 1;
+    text-align: center;
+}
+
+.productDetail__left img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.productDetail__right {
+    flex: 1;
+}
+
+.productDetail__right h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.productDetail__author {
+    color: #007185;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.productDetail__rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.productDetail__rating .star-icon {
+    color: #ff9900;
+    font-size: 18px;
+}
+
+.productDetail__rating span {
+    color: #007185;
+    font-size: 14px;
+}
+
+.productDetail__price {
+    display: flex;
+    align-items: baseline;
+    margin: 15px 0;
+}
+
+.price__symbol {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.price__whole {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.price__fraction {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.productDetail__delivery {
+    margin: 15px 0;
+}
+
+.productDetail__delivery p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.productDetail__stock .in-stock {
+    color: #007600;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.productDetail__actions {
+    margin-top: 20px;
+}
+
+.quantity__selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.quantity__selector label {
+    font-weight: bold;
+}
+
+.quantity__selector select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f7f8fa;
+}
+
+.addToCart__btn, .buyNow__btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.addToCart__btn {
+    background: #ffd814;
+    color: #0f1111;
+}
+
+.addToCart__btn:hover {
+    background: #f7ca00;
+}
+
+.buyNow__btn {
+    background: #ff9900;
+    color: white;
+}
+
+.buyNow__btn:hover {
+    background: #e68900;
+}
