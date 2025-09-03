@@ -4,7 +4,7 @@ export const initialState = {
 };
 
 export const getBasketTotal = (basket) => 
-    basket?.reduce((amount, item) => item.price + amount, 0);
+    basket?.reduce((amount, item) => (item.price * item.quantity) + amount, 0);
 
 const reducer = (state, action) => {
 
@@ -12,10 +12,22 @@ const reducer = (state, action) => {
 
     switch(action.type){
         case 'ADD_TO_BASKET': 
-            return {
-                ...state,
-                basket: [...state.basket, action.item],
-            };
+            const existingItem = state.basket.find(item => item.id === action.item.id);
+            if (existingItem) {
+                return {
+                    ...state,
+                    basket: state.basket.map(item => 
+                        item.id === action.item.id 
+                            ? { ...item, quantity: item.quantity + action.item.quantity }
+                            : item
+                    )
+                };
+            } else {
+                return {
+                    ...state,
+                    basket: [...state.basket, { ...action.item, quantity: action.item.quantity }],
+                };
+            }
         
         case 'REMOVE_FROM_BASKET': 
             const index = state.basket.findIndex(
@@ -32,6 +44,16 @@ const reducer = (state, action) => {
             }
 
             return {...state, basket : newBasket}
+
+        case 'UPDATE_QUANTITY':
+            return {
+                ...state,
+                basket: state.basket.map(item => 
+                    item.id === action.id 
+                        ? { ...item, quantity: action.quantity }
+                        : item
+                )
+            }
 
         case 'SET_USER':
             return {

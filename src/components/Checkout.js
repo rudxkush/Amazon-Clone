@@ -1,6 +1,6 @@
 import React from 'react';
 import './Checkout.css';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Subtotal from './Subtotal';
 import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "../StateProvider";
@@ -20,11 +20,13 @@ function Checkout() {
 
                     {basket.map(item => (
                         <CheckoutProduct
+                            key={item.id}
                             id = {item.id}
                             title = {item.title}
                             image = {item.image}
                             price = {item.price}
                             rating = {item.rating}
+                            quantity = {item.quantity}
                         />
                     ))}
 

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
+import Orders from "./components/Orders";
 import { useEffect } from "react";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -34,6 +35,13 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/orders" element={
+            <>
+              <Header />
+              <Orders />
+              <Footer />
+            </>
+          } />
           <Route path="/checkout" element={
             <>
               <Header />

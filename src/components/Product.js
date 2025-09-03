@@ -1,16 +1,15 @@
 // import { CenterFocusStrongOutlined } from "@material-ui/icons";s
-import React from "react";
+import React, { useState } from "react";
 import "./Product.css";
-import StarIcon from "@material-ui/icons/Star";
+import StarIcon from "@mui/icons-material/Star";
 import { useStateValue } from "../StateProvider";
 
 function Product({id, title, image, price, rating, author, subtitle }) {
 
   const [{basket}, dispatch] = useStateValue();
+  const [quantity, setQuantity] = useState(1);
 
-  console.log("this is the basket >>> ", basket);
-
-  const addToBasket = () => {
+  const addToCart = () => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -19,6 +18,7 @@ function Product({id, title, image, price, rating, author, subtitle }) {
         image: image,
         price: price,
         rating: rating,
+        quantity: quantity,
       },
     });
   };
@@ -44,9 +44,19 @@ function Product({id, title, image, price, rating, author, subtitle }) {
         </div>
       </div>
 
-      <img src={image}></img>
+      <img src={image} alt={title}></img>
 
-      <button onClick = {addToBasket}>Add to Basket</button>
+      <div className="product-actions">
+        <div className="quantity-selector">
+          <label>Qty: </label>
+          <select value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))}>
+            {[...Array(10)].map((_, i) => (
+              <option key={i+1} value={i+1}>{i+1}</option>
+            ))}
+          </select>
+        </div>
+        <button onClick={addToCart}>Add to Cart</button>
+      </div>
     </div>
   );
 }
