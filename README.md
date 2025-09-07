@@ -2,20 +2,18 @@
 
 A full-featured Amazon clone built with React.js, Firebase, and Material-UI, featuring real-time authentication, shopping cart functionality, and secure payment processing.
 
-![Amazon Clone](./public/amazon-head.png)
+## Features
 
-## 🚀 Features
+- ** User Authentication** - Firebase Auth with email/password
+- ** Shopping Cart** - Add/remove items with real-time updates
+- ** Secure Payments** - Stripe integration for real transactions
+- ** Responsive Design** - Mobile-first approach
+- ** Real-time Database** - Firebase Firestore integration
+- ** Modern UI** - Material-UI components
+- ** Fast Performance** - Optimized React components
+- ** Security** - Environment variables for sensitive data
 
-- **🔐 User Authentication** - Firebase Auth with email/password
-- **🛒 Shopping Cart** - Add/remove items with real-time updates
-- **💳 Secure Payments** - Stripe integration for real transactions
-- **📱 Responsive Design** - Mobile-first approach
-- **🔥 Real-time Database** - Firebase Firestore integration
-- **🎨 Modern UI** - Material-UI components
-- **⚡ Fast Performance** - Optimized React components
-- **🔒 Security** - Environment variables for sensitive data
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React 18, Material-UI v5, React Router v6
 - **Backend:** Firebase (Auth, Firestore, Hosting)
@@ -24,7 +22,7 @@ A full-featured Amazon clone built with React.js, Firebase, and Material-UI, fea
 - **Styling:** CSS3, Material-UI
 - **Build Tool:** Create React App
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -61,7 +59,7 @@ A full-featured Amazon clone built with React.js, Firebase, and Material-UI, fea
 2. Get your publishable and secret keys
 3. Add them to your environment variables
 
-## 🚀 Deployment
+## Deployment
 
 ### Firebase Hosting
 ```bash
@@ -92,7 +90,7 @@ src/
 └── App.js              # Main application component
 ```
 
-## 🔐 Security Features
+## Security Features
 
 - Environment variables for sensitive data
 - Firebase security rules
@@ -100,7 +98,7 @@ src/
 - Secure authentication flow
 - Protected routes
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -112,7 +110,7 @@ src/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Firebase](https://firebase.google.com/) for backend services
 - [Material-UI](https://mui.com/) for UI components
