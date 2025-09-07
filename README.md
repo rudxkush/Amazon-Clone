@@ -4,14 +4,14 @@ A full-featured Amazon clone built with React.js, Firebase, and Material-UI, fea
 
 ## Features
 
-- ** User Authentication** - Firebase Auth with email/password
-- ** Shopping Cart** - Add/remove items with real-time updates
-- ** Secure Payments** - Stripe integration for real transactions
-- ** Responsive Design** - Mobile-first approach
-- ** Real-time Database** - Firebase Firestore integration
-- ** Modern UI** - Material-UI components
-- ** Fast Performance** - Optimized React components
-- ** Security** - Environment variables for sensitive data
+- **User Authentication** - Firebase Auth with email/password
+- **Shopping Cart** - Add/remove items with real-time updates
+- **Secure Payments** - Stripe integration for real transactions
+- **Responsive Design** - Mobile-first approach
+- **Real-time Database** - Firebase Firestore integration
+- **Modern UI** - Material-UI components
+- **Fast Performance** - Optimized React components
+- **Security** - Environment variables for sensitive data
 
 ## Tech Stack
 
