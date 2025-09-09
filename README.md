@@ -73,23 +73,6 @@ npm run build
 # Upload build folder to Netlify
 ```
 
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── Header.js          # Navigation header
-│   ├── Home.js           # Homepage with products
-│   ├── Product.js        # Individual product component
-│   ├── Checkout.js       # Shopping cart page
-│   ├── Login.js          # Authentication page
-│   └── Footer.js         # Footer component
-├── firebase.js           # Firebase configuration
-├── StateProvider.js      # Context API setup
-├── reducer.js           # State management logic
-└── App.js              # Main application component
-```
-
 ## Security Features
 
 - Environment variables for sensitive data
